@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Your description goes here">
+    	<meta name="keywords" content="one, two, three">
+	
+		<title>Rock-Paper-Scissors-Lizard-Spock</title>
+		
+		<!-- external CSS link -->
+	    <link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+		
+
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+		<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+
+
+	</head>
+	<body> 
+	      <h1 id="header">Rock-Paper-Scissors-Lizard-Spock: Human vs. Computer<div id="headerBar"> </div> </h1>
+	     
+
+	    <div id="splashPage">
+	       <img id="winnerCard" src="images/youwon.jpg" />
+	       <img id="loserCard" src="images/youlost.jpg" />
+	    </div>
+
+		<div id="entirePage"> 
+	      <div class = "clearfix">
+		      <div id="rules">
+		      		The first player to win 50 rounds is the winner.
+		      </div>
+			  <div id="buttonBox">
+				  <button id="startButton" type="button">Start</button>
+				  <button id="rulesButton" rel="#rulesGraph" type="button">Rules</button>
+				  <button id="musicButton" type="button">Music</button>
+				  <button id="aboutButton" rel="#aboutCard" type="button">About</button>
+			  </div>
+		  </div>
+
+			<div class="simple_overlay" id="rulesGraph">
+			  <img src="images/rules.gif" />
+			</div>
+
+			<div class="simple_overlay" id="aboutCard">
+			  <img src="images/rps-about2.png" />
+			</div>
+
+
+        <div id="scoreboardSection" id="clearfix">
+		  <div id="scoreboard"> 
+				<div id="scoreboardTitle">Scoreboard</div>
+				<div id="chartHuman">
+					<span>Human:</span>
+	  				<div id="humanBar">0</div>
+	  			</div>
+	  			<div id="chartComputer">
+	  				<span>Computer:</span>
+	 				<div id="computerBar">0</div>
+				</div>
+		  </div>
+          <div id="radio">
+		     <audio id = "radioStarwaves" loop controls>
+				  <source src="music/starwaves.mp3" type="audio/mpeg">
+		    </audio>
+		   	<audio id = "radioRobots" loop controls>
+				  <source src="music/robots.mp3" type="audio/mpeg">
+		    </audio>
+		    <audio id = "radioOblivion" loop controls>
+				  <source src="music/oblivion.mp3" type="audio/mpeg">
+		    </audio>
+		     <br>
+		     <span>title</span>
+		   </div>
+		  <br>
+		 </div>
+
+
+		 <div id="gameArea" class="clearfix">
+		  <div id="interfacebox">
+			<div id="humanbox">
+				<div id = "humanTitle">Human Control Panel</div>
+				<div id="selectorimgs"> 
+					<input id="inputRock" type="image" src="images/rock.png" width = "60" height = "60">
+					<input id="inputPaper" type="image" src="images/paper.png" width = "60" height = "60">
+					<input id="inputScissors" type="image" src="images/scissors.png" width = "60" height = "60">
+					<input id="inputLizard" type="image" src="images/lizard.png" width = "60" height = "60">
+					<input id="inputSpock" type="image" src="images/spock.png" width = "60" height = "60">
+				</div>
+				<div id="selectorwords"> 
+					<span> Rock </span>
+					<span> Paper </span>
+					<span> Scissors </span>
+					<span> Lizard </span>
+					<span> Spock </span>
+				</div>
+			</div>
+			<br>
+			<div id="computerbox">
+				<div id = "computerTitle">Computer Opponent</div>
+				<div class="picture"> 
+					<input id="computerGif" type="image" src="images/animatedibm.gif" width="346" height="230">
+				</div>
+				<span>Press computer to see algorithm.</span>
+	        </div>  
+		 </div>
+		
+		<div id="displaybox" >
+		  	<div id="lastroundTitle">Last Round</div>
+
+		  	<div id="displayboxHuman">
+		  	 <span id="humanPlay">Human:</span>
+	    	   <div class="shownImages">
+				 <img class="rock" src="images/rock.png" width = "160" height = "160">
+				 <img class="paper" src="images/paper.png" width = "160" height = "160">
+				 <img class="scissors" src="images/scissors.png" width = "160" height = "160">
+				 <img class="lizard" src="images/lizard.png" width = "160" height = "160">
+				 <img class="spock" src="images/spock.png" width = "160" height = "160">
+				 <img class="whitespace" src="images/whitespace.png" width = "160" height = "160">
+ 			  </div>	
+		  	</div>
+
+		  	<br>
+		    <div id="outcomebox">
+		    	Outcome.
+		    </div>	
+		  	<br>
+
+	    	<div id="displayboxComputer">
+	    	 <span id="computerPlay">Computer:</span>
+	    	   <div class="shownImages">
+				 <img class="rock" src="images/rock.png" width = "160" height = "160">
+				 <img class="paper" src="images/paper.png" width = "160" height = "160">
+				 <img class="scissors" src="images/scissors.png" width = "160" height = "160">
+				 <img class="lizard" src="images/lizard.png" width = "160" height = "160">
+				 <img class="spock" src="images/spock.png" width = "160" height = "160">
+				 <img class="whitespace" src="images/whitespace.png" width = "160" height = "160">
+ 			  </div>	
+		   </div>
+
+	
+	     </div>
+	     <br>
+	   </div>
+
+	  </div>
+	  <br>
+
+		 <div id="console" class="clearfix">
+		  	 <div class="consoleHeader"> 
+		  	 	C:\Windows\System32\cmd.exe 
+		  	 </div>
+		  	 <input id="consoleButton" type="image" src="images/xbutton.png" width = "35" height = "22">
+	          <br>
+		  	 <div id="consoleText" class="consoleFont">
+	  	  		C:\_
+	  	  	 </div>
+	  	  	 <div id="consoleText1" class="consoleFont">
+	  	  	 </div>
+		  	 <div id="consoleText2" class="consoleFont">
+	  	  	 </div>
+		  	 <div id="consoleText3" class="consoleFont">
+	  	  	 </div>
+	  	  	 <div id="consoleText4" class="consoleFont">
+	  	  	 </div>
+	  	  	 <div id="consoleText5" class="consoleFont">
+	  	  	 </div>
+	  	  	 <div id="consoleText6" class="consoleFont">
+	  	  	 </div>
+		   
+		</div>
+
+
+	  <script src="js/main.js"></script>
+	</body>
+</html>

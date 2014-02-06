@@ -1,0 +1,415 @@
+/* 
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP                   
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right; 
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left; 
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES                   
+/*******************************************/
+
+
+
+
+/******************************************
+/* LAYOUT                   
+/*******************************************/
+
+/* Center the container */
+#container {
+	width: 960px;
+	/*margin: auto;*/
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES                   
+/*******************************************/
+
+
+
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  text-align: left;
+  background: white;
+  color: black; 
+  margin: 3em;
+}
+
+
+#header {
+     font-size:26px;
+     color:black;
+     width:750px;
+     background:white;
+}
+
+#headerBar {
+     background:steelblue;
+     height:6px;
+     border-bottom:2px solid black;
+}
+
+h2 {
+     font-size:20px;
+     color:black; 
+}
+
+
+#rules {
+     font-size: 17px;
+     color:black;
+     width:384px;
+     height:45px;
+     float:left;
+     padding-top:5px;
+     text-align:bottom;
+}
+
+#buttonBox {
+   float:left;
+   margin-left:79px;
+}
+
+button {
+     background:steelblue;
+     color:white;
+     font-size:21px;
+     border:2px solid black;
+}
+
+#interfacebox{
+     float:left;
+     width:500;
+}
+#scoreboard {
+     width:350px;
+     margin-bottom:10px;
+     border:2px solid black;
+     font-size:20px;
+     float:left;
+}
+#radio {
+    float:left;
+    margin-left:90px;
+    margin-top: 0px;
+    display:none;
+}
+#radio span {
+   font-size:16px;
+   float:right;
+   background:steelblue;
+   color:white;
+   width:300px;
+   text-align:right;
+   margin-right:1px;
+   padding-right:2px;
+   border:2px solid black;
+}
+#radioStarwaves {
+  display:none;
+}
+#radioRobots {
+  display:none;
+}
+#radioOblivion {
+  display:none;
+}
+
+#scoreboardTitle{
+     font-size:20px;
+     background-color:steelblue;
+     color:white;
+     font-weight:bolder;
+     padding-left:3px;
+     border-bottom:2px solid black;
+}
+
+#scoreboard span{
+     padding-left:2px;
+     color:black;
+}
+
+#chartHuman div {
+  font: 20px sans-serif;
+  background-color:green;
+  text-align: right;
+  margin-bottom:6px;
+  color: white;
+  border-top:1px solid black;
+  border-right:1px solid black;
+  border-bottom:1px solid black;
+  width:20px;
+}
+#chartComputer div {
+  font: 20px sans-serif;
+  background-color: red;
+  text-align: right;
+  margin-bottom:6px;
+  color: white;
+  border-top:1px solid black;
+  border-right:1px solid black;
+  border-bottom:1px solid black;
+  width:20px;
+}
+
+
+#selectorimgs {
+  margin-top:10px;
+}
+
+#selectorwords span{
+     font-size:15px;
+     margin-left:15px;
+     font-size:bolder;
+     color:black;
+}
+
+#humanbox {
+     width:350px;
+     margin-top:30px;
+     margin-bottom:20px;
+     padding-bottom:10px;
+     border:2px solid black; 
+}
+#humanTitle{
+     font-size:20px;
+     background-color:steelblue;
+     color:white;
+     font-weight:bolder;
+     padding-left:3px;
+     border-bottom:2px solid black;
+}
+#computerTitle{
+     font-size:20px;
+     background-color:steelblue;
+     color:white;
+     font-weight:bolder;
+     padding-left:3px;
+     border-bottom:2px solid black;
+}
+#computerbox{
+    color:black;
+    font-size:12px;
+    width:350px;
+    border:2px solid black;
+    margin-top:15px;
+}
+
+#computerbox span{
+    color:black;
+    font-size:12px;
+    padding-left:3px;
+}
+
+#displayboxHuman {
+  display:none;
+}
+
+#displayboxComputer {
+  display:none;
+}
+
+#console {
+  margin-top:10px;
+  float:left;
+  width:750px;
+  height:200px; 
+  background:black;
+  border:1px solid black;
+}
+.consoleFont {
+  color:white;
+  font-size:18px;
+}
+
+#console .consoleHeader {
+  float:left;
+  background-color:steelblue;
+  color:beige;
+  font-size:16px;
+  width:713px;
+}
+
+#entirePage {
+  margin-top:10px;
+}
+
+br {
+    clear: both;
+}
+
+#lastroundTitle{
+  font-size:20px;
+  color:white;
+  background:steelblue;
+  font-weight:bold;
+  border-bottom:2px solid black;
+}
+
+#console {
+  display:none;
+}
+
+
+.simple_overlay {
+    /* must be initially hidden */
+    display:none;
+    /* place overlay on top of other elements */
+    z-index:10000;
+    /* styling */
+    background-color:white; 
+    width:475px;
+    min-height:200px;
+    border:1px solid #666;
+    /* CSS3 styling for latest browsers */
+    -moz-box-shadow:0 0 90px 5px #000;
+    -webkit-box-shadow: 0 0 90px #000;
+}
+ 
+/* close button positioned on upper right corner */
+.simple_overlay .close {
+    background-image:url(../images/overlay_close.png);
+    position:absolute;
+    right:-15px;
+    top:-15px;
+    cursor:pointer;
+    height:35px;
+    width:35px;
+}
+
+#gameArea{
+  width:910px;
+  height:480px;
+  float:left;
+}
+#interfacebox{
+  float:left;
+}
+
+#humanbox{
+  float:left;
+}
+
+#displaybox{
+     float:left;
+     width:350px; 
+     margin-left:50px;
+     display:none;
+     text-align:center; 
+    border:2px solid black
+}
+
+#splashPage{
+  display:none;
+  margin-bottom:30px;
+  margin-top:20px;
+}
+
+#loserCard{
+  display:none;
+  margin-left:50px;
+  border:1px solid black;
+}
+#winnerCard{
+  display:none;
+  margin-left:10px;
+  border:1px solid black;
+}
+
+#humanPlay{
+  margin-top:30px;
+  font-size:18px;
+  height:80px;
+  float:left;
+  margin-left:4px;
+  margin-right:20px; 
+}
+
+#computerPlay{
+  margin-top:26px;
+  font-size:18px;
+  height:80px;
+  float:left;
+  margin-left:4px;
+}
+
+#displayboxHuman img{
+  margin-top:16px;
+  float:left;
+}
+
+#displayboxComputer img{
+  margin-top:38px;
+  float:left;
+}
+
+
+#outcomebox {
+  display:none;
+  font-size:29px;
+
+  font-weight:bolder;
+  color:steelblue;
+  float:center;
+ 
+  margin-top:20px;
+
+}
+
+
+img{
+    -webkit-transition: margin-left .7s ease;
+    -moz-transition: margin-left .7s ease;
+    transition: margin-left .7s ease;
+
+    -webkit-transition-delay: 0.2s; 
+    -moz-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+} 
+
+.img-moved-left{
+   margin-left:+97px;
+}
+
+
+
